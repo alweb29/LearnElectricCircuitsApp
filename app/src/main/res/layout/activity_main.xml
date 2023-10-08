@@ -10,7 +10,7 @@
     android:padding="3dp">
 
     <ImageButton
-        android:id="@+id/basic_button1"
+        android:id="@+id/ib_calculator_1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/basic_button3"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,7 +24,7 @@
         android:id="@+id/basic_button2"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/basic_button4"
-        app:layout_constraintStart_toEndOf="@id/basic_button1"
+        app:layout_constraintStart_toEndOf="@id/ib_calculator_1"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="150dp"
         android:layout_height="150dp"
@@ -33,7 +33,7 @@
         android:background="#00000000"/>
     <ImageButton
         android:id="@+id/basic_button3"
-        app:layout_constraintTop_toBottomOf="@id/basic_button1"
+        app:layout_constraintTop_toBottomOf="@id/ib_calculator_1"
         app:layout_constraintBottom_toTopOf="@id/basic_button5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/basic_button4"
