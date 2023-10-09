@@ -18,8 +18,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:contentDescription="First Button"
-        android:src="@drawable/basic_choice_tile"
-        android:background="#00000000"/>
+        android:src="@drawable/baseline_calculate_24"
+        android:background="@drawable/basic_choice_tile"/>
     <ImageButton
         android:id="@+id/basic_button2"
         app:layout_constraintTop_toTopOf="parent"
@@ -84,8 +84,8 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:contentDescription="Seventh Button"
-        android:src="@drawable/basic_choice_tile"
-        android:background="#00000000"/>
+        android:src="@drawable/baseline_done_24"
+        android:background="@drawable/basic_choice_tile"/>
     <ImageButton
         android:id="@+id/basic_button8"
         app:layout_constraintTop_toBottomOf="@id/basic_button6"
@@ -95,7 +95,7 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:contentDescription="Eighth Button"
-        android:src="@drawable/basic_choice_tile"
-        android:background="#00000000"/>
+        android:src="@drawable/baseline_edit_calendar_24"
+        android:background="@drawable/basic_choice_tile"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
