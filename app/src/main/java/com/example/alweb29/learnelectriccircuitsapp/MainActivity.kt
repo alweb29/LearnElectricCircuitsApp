@@ -31,10 +31,9 @@ class MainActivity : AppCompatActivity() {
         val btnCalculator : ImageButton = findViewById(R.id.ib_calculator_1)
 
         btnCalculator.setOnClickListener{
-            Log.e("done", "went to calculator")
+            Log.e("msg", "went to calculator")
             val intent = Intent(this, CalculatorMainView::class.java)
             startActivity(intent)
-            finish()
         }
     }
 }

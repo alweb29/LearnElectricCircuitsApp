@@ -16,6 +16,12 @@
             android:exported="false"
             android:label="CalculatorMainView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".calculator.CalculatorSerialView"
+            android:exported="false"
+            android:label="CalculatorSerialView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

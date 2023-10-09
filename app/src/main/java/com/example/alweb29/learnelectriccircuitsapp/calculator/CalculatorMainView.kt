@@ -25,16 +25,15 @@ class CalculatorMainView : AppCompatActivity() {
 
 
         ibSerialConnection?.setOnClickListener {
-            //TODO change to proper classes - serial and parallel
-            intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, CalculatorSerialView::class.java)
             startActivity(intent)
-            finish()
+
         }
 
         ibParallelConnection?.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
-            finish()
+
         }
 
         ibGoBackArrow?.setOnClickListener {
