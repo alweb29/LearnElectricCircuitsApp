@@ -4,22 +4,22 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".calculator.CalculatorSerialView"
+    tools:context=".calculator.CalculatorParallelView"
     android:fillViewport="true">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Serial calculator"
+        android:text="Parallel calculator"
         android:textStyle="bold"
-        android:textSize="50sp"
+        android:textSize="45sp"
         android:gravity="center"
         android:layout_margin="20dp"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="200sp"
-        android:src="@drawable/serial_connection_tochange"/>
+        android:src="@drawable/parallel_connection_to_change"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
             android:layout_marginStart="20dp">
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_R1_serial"
+                android:id="@+id/et_R1_parallel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Enter resistance in ohm"
@@ -75,7 +75,7 @@
             android:layout_marginStart="20dp">
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_R2_serial"
+                android:id="@+id/et_R2_parallel"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="Enter resistance in ohm"
@@ -91,7 +91,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_result_calculator_serial"
+        android:id="@+id/tv_result_calculator_parallel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Rn = ..."
@@ -99,7 +99,7 @@
         android:layout_marginStart="15dp"/>
 
     <Button
-        android:id="@+id/btn_calculate_calculator_serial"
+        android:id="@+id/btn_calculate_calculator_parallel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="300sp"
@@ -112,7 +112,7 @@
         />
 
     <ImageButton
-        android:id="@+id/ib_go_back_arrow_calculator_serial"
+        android:id="@+id/ib_go_back_arrow_calculator_parallel"
         android:src="@drawable/baseline_arrow_back_24"
         android:background="#00000000"
         android:layout_height="50dp"

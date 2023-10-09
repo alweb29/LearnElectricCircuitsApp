@@ -22,6 +22,11 @@
             android:label="CalculatorSerialView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
+        <activity android:name=".calculator.CalculatorParallelView"
+            android:exported="false"
+            android:label="CalculatorParallelView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

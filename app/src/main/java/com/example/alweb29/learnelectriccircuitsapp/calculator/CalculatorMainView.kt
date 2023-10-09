@@ -31,7 +31,7 @@ class CalculatorMainView : AppCompatActivity() {
         }
 
         ibParallelConnection?.setOnClickListener {
-            intent = Intent(this, MainActivity::class.java)
+            intent = Intent(this, CalculatorParallelView::class.java)
             startActivity(intent)
 
         }
