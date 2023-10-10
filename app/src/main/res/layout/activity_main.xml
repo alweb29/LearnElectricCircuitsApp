@@ -56,7 +56,7 @@
     <ImageButton
         android:id="@+id/basic_button5"
         app:layout_constraintTop_toBottomOf="@id/basic_button3"
-        app:layout_constraintBottom_toTopOf="@id/basic_button7"
+        app:layout_constraintBottom_toTopOf="@id/ib_test_main_view_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/basic_button6"
         android:layout_width="150dp"
@@ -67,7 +67,7 @@
     <ImageButton
         android:id="@+id/basic_button6"
         app:layout_constraintTop_toBottomOf="@id/basic_button4"
-        app:layout_constraintBottom_toTopOf="@id/basic_button8"
+        app:layout_constraintBottom_toTopOf="@id/ib_calendar_main_view_button"
         app:layout_constraintStart_toEndOf="@id/basic_button5"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="150dp"
@@ -76,21 +76,21 @@
         android:src="@drawable/basic_choice_tile"
         android:background="#00000000"/>
     <ImageButton
-        android:id="@+id/basic_button7"
+        android:id="@+id/ib_test_main_view_button"
         app:layout_constraintTop_toBottomOf="@id/basic_button5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/basic_button8"
+        app:layout_constraintEnd_toStartOf="@id/ib_calendar_main_view_button"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:contentDescription="Seventh Button"
         android:src="@drawable/baseline_done_24"
         android:background="@drawable/basic_choice_tile"/>
     <ImageButton
-        android:id="@+id/basic_button8"
+        android:id="@+id/ib_calendar_main_view_button"
         app:layout_constraintTop_toBottomOf="@id/basic_button6"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/basic_button7"
+        app:layout_constraintStart_toEndOf="@id/ib_test_main_view_button"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="150dp"
         android:layout_height="150dp"

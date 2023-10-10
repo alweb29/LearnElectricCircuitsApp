@@ -29,11 +29,28 @@ class MainActivity : AppCompatActivity() {
 
 
         val btnCalculator : ImageButton = findViewById(R.id.ib_calculator_1)
+        val btnCalendar : ImageButton = findViewById(R.id.ib_calendar_main_view_button)
+        val btnTest : ImageButton = findViewById(R.id.ib_test_main_view_button)
 
         btnCalculator.setOnClickListener{
             Log.e("msg", "went to calculator")
             val intent = Intent(this, CalculatorMainView::class.java)
             startActivity(intent)
         }
+
+
+        btnTest.setOnClickListener{
+            //TODO implement test activity
+            //val intent = Intent(this, TestMainView::class.java)
+            //startActivity(intent)
+        }
+
+        btnCalendar.setOnClickListener{
+            //TODO implement calendar, find out about notifications
+            //val intent = Intent(this, CalendarMainView::class.java)
+            //startActivity(intent)
+        }
+
+
     }
 }

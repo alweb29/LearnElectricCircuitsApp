@@ -47,7 +47,6 @@
                 android:layout_height="match_parent"
                 android:hint="Enter resistance in ohm"
                 android:inputType="numberDecimal"
-                android:textColor="@color/black"
                 android:textColorHint="@color/design_default_color_primary" />
 
         </com.google.android.material.textfield.TextInputLayout>
@@ -80,7 +79,6 @@
                 android:layout_height="match_parent"
                 android:hint="Enter resistance in ohm"
                 android:inputType="numberDecimal"
-                android:textColor="@color/black"
                 android:textColorHint="@color/design_default_color_primary" />
 
         </com.google.android.material.textfield.TextInputLayout>
