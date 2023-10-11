@@ -27,6 +27,21 @@
             android:label="CalculatorParallelView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
+        <activity android:name=".test.TestMainView"
+            android:exported="false"
+            android:label="TestMainView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".test.TestQuestionsActivity"
+            android:exported="false"
+            android:label="TestQuestionActivity"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".test.TestResultActivity"
+            android:exported="false"
+            android:label="TestResultActivity"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -10,33 +10,29 @@ import com.example.alweb29.learnelectriccircuitsapp.R
 class CalculatorMainView : AppCompatActivity() {
 
 
-    private var ibGoBackArrow : ImageButton? = null
-    private var ibSerialConnection : ImageButton? = null
-    private var ibParallelConnection : ImageButton? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calculator)
 
 
-        ibSerialConnection = findViewById(R.id.ib_serial_connection)
-        ibParallelConnection = findViewById(R.id.ib_parallel_connection)
-        ibGoBackArrow = findViewById(R.id.ib_go_back_arrow_calculator_menu)
+        val ibSerialConnection : ImageButton = findViewById(R.id.ib_serial_connection)
+        val ibParallelConnection : ImageButton = findViewById(R.id.ib_parallel_connection)
+        val ibGoBackArrow : ImageButton = findViewById(R.id.ib_go_back_arrow_calculator_menu)
 
 
-        ibSerialConnection?.setOnClickListener {
-            val intent = Intent(this, CalculatorSerialView::class.java)
+        ibSerialConnection.setOnClickListener {
+            intent = Intent(this, CalculatorSerialView::class.java)
             startActivity(intent)
 
         }
 
-        ibParallelConnection?.setOnClickListener {
+        ibParallelConnection.setOnClickListener {
             intent = Intent(this, CalculatorParallelView::class.java)
             startActivity(intent)
 
         }
 
-        ibGoBackArrow?.setOnClickListener {
+        ibGoBackArrow.setOnClickListener {
             intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".test.TestMainView"
+    android:layout_margin="10dp"
+    android:padding="10sp">
+
+    <TextView
+        android:layout_marginTop="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:text="Test! \nChoose your chapter :"
+        android:layout_marginBottom="10sp"
+        android:gravity="center_horizontal"/>
+
+    <Button
+        android:id="@+id/btn_first_chapter_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 chapter"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/btn_second_chapter_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="2 chapter"
+        android:textSize="40sp"/>
+
+    <Button
+        android:id="@+id/btn_third_chapter_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3 chapter"
+        android:textSize="40sp"/>
+
+
+</LinearLayout>
