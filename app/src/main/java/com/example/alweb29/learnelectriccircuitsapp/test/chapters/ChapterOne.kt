@@ -7,7 +7,7 @@ object ChapterOne : Chapter{
 
     private var q1 = MultiAnswerQuestion(
         1,
-        "What is resistance of this if R1 = 5ohm and R2 = 10 ohm",
+        "What is resistance of this if R1 = 5 ohm and R2 = 10 ohm",
         R.drawable.parallel_connection_to_change,
         "10",
         "15",
@@ -18,7 +18,7 @@ object ChapterOne : Chapter{
 
     private var q2 = MultiAnswerQuestion(
         2,
-        "What is resistance of this if R1 = 10ohm and R2 = 10 ohm",
+        "What is resistance of this if R1 = 10 ohm and R2 = 10 ohm",
         R.drawable.parallel_connection_to_change,
         "10",
         "15",
@@ -28,7 +28,7 @@ object ChapterOne : Chapter{
     )
 
     private var q3 = MultiAnswerQuestion(
-        1,
+        3,
         "Check only correct answers",
         R.drawable.parallel_connection_to_change,
         "U=R*I",

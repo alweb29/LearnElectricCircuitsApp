@@ -39,7 +39,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var currentQuestionIndex : Int = -1
     private var selectedQuestions = arrayOf(0,0,0,0)
     private var correctAnswerScore : Int = 0
-    private var mSelectedQuestionPosition : Int = 0
+    private var mSelectedQuestionPosition : Int = 1
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -108,6 +108,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                 R.drawable.basic_choice_tile_selected
             )
         }
+        selectedQuestions = arrayOf(0,0,0,0)
     }
     
     private fun setQuestionContent(){
@@ -134,46 +135,56 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     override fun onClick(view: View?) {
         when(view?.id){
             R.id.tv_option_one->{
-                tvOptionOne?.let {
-                    if (selectedQuestions[0] == 0){
-                        selectedOptionView(it, 0)
-                    }else{
-                        unselectOptionView(it, 0)
+                if (mSelectedQuestionPosition!=0){
+                    tvOptionOne?.let {
+                        if (selectedQuestions[0] == 0){
+                            selectedOptionView(it, 0)
+                        }else{
+                            unselectOptionView(it, 0)
+                        }
+                        mSelectedQuestionPosition=1
                     }
-                    mSelectedQuestionPosition=1
                 }
             }
 
             R.id.tv_option_two->{
-                tvOptionTwo?.let {
-                    if (selectedQuestions[1] == 0){
-                        selectedOptionView(it, 1)
-                    }else{
-                        unselectOptionView(it, 1)
+                if (mSelectedQuestionPosition!=0){
+                    tvOptionTwo?.let {
+                        if (selectedQuestions[1] == 0){
+                            selectedOptionView(it, 1)
+                        }else{
+                            unselectOptionView(it, 1)
+                        }
+                        mSelectedQuestionPosition=1
                     }
-                    mSelectedQuestionPosition=1
                 }
             }
 
             R.id.tv_option_three->{
-                tvOptionThree?.let {
-                    if (selectedQuestions[2] == 0){
-                        selectedOptionView(it, 2)
-                    }else{
-                        unselectOptionView(it, 2)
+                if (mSelectedQuestionPosition!=0){
+
+                    tvOptionThree?.let {
+                        if (selectedQuestions[2] == 0){
+                            selectedOptionView(it, 2)
+                        }else{
+                            unselectOptionView(it, 2)
+                        }
+                        mSelectedQuestionPosition=1
                     }
-                    mSelectedQuestionPosition=1
                 }
             }
 
             R.id.tv_option_four->{
-                tvOptionFour?.let {
-                    if (selectedQuestions[3] == 0){
-                        selectedOptionView(it, 3)
-                    }else{
-                        unselectOptionView(it, 3)
+                if (mSelectedQuestionPosition!=0){
+
+                    tvOptionFour?.let {
+                        if (selectedQuestions[3] == 0){
+                            selectedOptionView(it, 3)
+                        }else{
+                            unselectOptionView(it, 3)
+                        }
+                        mSelectedQuestionPosition=1
                     }
-                    mSelectedQuestionPosition=1
                 }
             }
 
@@ -184,6 +195,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     when{
                         currentQuestionIndex + 2 <= questionSet!!.getTotalNumOfQuestions()->{
                             setQuestion()
+                            mSelectedQuestionPosition=1
                         }
                         else ->{
                             val intent = Intent(this, TestResultActivity::class.java)
@@ -191,12 +203,11 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                             intent.putExtra(Constants.TOTAL_QUESTIONS, questionSet?.getTotalNumOfQuestions())
                             startActivity(intent)
                             finish()
-
                         }
                     }
                 }else{
                     if (!currentQuestion!!.correctAnswers.contentEquals(selectedQuestions)){
-                        highlightWrongAnswers()
+                        defaultOptionsView()
                     }else{
                         correctAnswerScore++
                     }
@@ -209,7 +220,6 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     }
 
                     mSelectedQuestionPosition = 0
-                    defaultOptionsView()
                 }
             }
         }
@@ -217,18 +227,14 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun highlightCorrectAnswers() {
         val answers: Array<Int>? = currentQuestion?.correctAnswers
-        if (answers != null) {
-            for (answer: Int in answers) {
-                highlightCorrectAnswer(answer, R.drawable.basic_choice_tile_selected)
+
+        for (answer in answers!!){
+            if (answer!=0){
+                highlightCorrectAnswer(answers.indexOf(answer)+1, R.drawable.basic_choice_tile)
             }
         }
     }
 
-    private fun highlightWrongAnswers() {
-        for (answer : Int in selectedQuestions){
-            highlightCorrectAnswer(answer, R.drawable.basic_choice_tile)
-        }
-    }
 
     private fun highlightCorrectAnswer(answer:Int, drawableView: Int){
         when(answer) {
@@ -237,6 +243,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     this,
                     drawableView
                 )
+                tvOptionOne?.setTypeface(tvOptionOne?.typeface, Typeface.BOLD)
             }
 
             2 -> {
@@ -244,6 +251,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     this,
                     drawableView
                 )
+                tvOptionTwo?.setTypeface(tvOptionTwo?.typeface, Typeface.BOLD)
             }
 
             3 -> {
@@ -251,6 +259,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     this,
                     drawableView
                 )
+                tvOptionThree?.setTypeface(tvOptionThree?.typeface, Typeface.BOLD)
             }
 
             4 -> {
@@ -258,6 +267,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     this,
                     drawableView
                 )
+                tvOptionFour?.setTypeface(tvOptionFour?.typeface, Typeface.BOLD)
             }
         }
     }
