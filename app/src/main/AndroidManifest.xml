@@ -42,6 +42,11 @@
             android:label="TestResultActivity"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
+        <activity android:name=".calendar.CalendarMainView"
+            android:exported="false"
+            android:label="CalendarMainView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
         <activity
             android:name=".MainActivity"
             android:exported="true"

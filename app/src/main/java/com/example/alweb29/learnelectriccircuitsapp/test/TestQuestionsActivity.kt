@@ -227,7 +227,7 @@ class TestQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun highlightCorrectAnswers() {
         val answers: Array<Int>? = currentQuestion?.correctAnswers
-
+        //TODO fix highlighting with more than one answer - only one highlights when more should
         for (answer in answers!!){
             if (answer!=0){
                 highlightCorrectAnswer(answers.indexOf(answer)+1, R.drawable.basic_choice_tile)

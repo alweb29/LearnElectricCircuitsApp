@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.alweb29.learnelectriccircuitsapp.calculator.CalculatorMainView
+import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarMainView
 import com.example.alweb29.learnelectriccircuitsapp.test.TestMainView
 
 class MainActivity : AppCompatActivity() {
@@ -40,15 +41,15 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+        //TODO implement other buttons
         btnTest.setOnClickListener{
             val intent = Intent(this, TestMainView::class.java)
             startActivity(intent)
         }
 
         btnCalendar.setOnClickListener{
-            //TODO implement calendar, find out about notifications
-            //val intent = Intent(this, CalendarMainView::class.java)
-            //startActivity(intent)
+            val intent = Intent(this, CalendarMainView::class.java)
+            startActivity(intent)
         }
 
 
