@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
+import android.widget.Toast
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.alweb29.learnelectriccircuitsapp.calculator.CalculatorMainView
@@ -31,6 +32,11 @@ class MainActivity : AppCompatActivity() {
 
 
         val btnCalculator : ImageButton = findViewById(R.id.ib_calculator_1)
+        val btnPowerCalculator : ImageButton = findViewById(R.id.ib_power_calculator)
+        val btnCircuitChanger : ImageButton = findViewById(R.id.ib_circuit_changer)
+        val btnCurrentDivider : ImageButton = findViewById(R.id.ib_current_divider)
+        val btnLearning : ImageButton = findViewById(R.id.ib_learning)
+        val btnFlashNotes : ImageButton = findViewById(R.id.ib_flash_notes)
         val btnCalendar : ImageButton = findViewById(R.id.ib_calendar_main_view_button)
         val btnTest : ImageButton = findViewById(R.id.ib_test_main_view_button)
 
@@ -42,6 +48,24 @@ class MainActivity : AppCompatActivity() {
 
 
         //TODO implement other buttons
+        btnPowerCalculator.setOnClickListener{
+            Toast.makeText(this, "kalkulator mocy", Toast.LENGTH_SHORT).show()
+        }
+        
+        btnCircuitChanger.setOnClickListener{
+            Toast.makeText(this, "zamiennik źródeł", Toast.LENGTH_SHORT).show()
+        }
+        btnCurrentDivider.setOnClickListener{
+            Toast.makeText(this, "dzielnik prądowy", Toast.LENGTH_SHORT).show()
+        }
+        btnLearning.setOnClickListener{
+            Toast.makeText(this, "nauka", Toast.LENGTH_SHORT).show()
+        }
+        btnFlashNotes.setOnClickListener{
+            Toast.makeText(this, "fiszki", Toast.LENGTH_SHORT).show()
+        }
+
+        
         btnTest.setOnClickListener{
             val intent = Intent(this, TestMainView::class.java)
             startActivity(intent)
