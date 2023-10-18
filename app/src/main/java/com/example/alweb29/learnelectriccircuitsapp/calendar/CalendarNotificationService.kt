@@ -1,19 +1,21 @@
-package com.example.alweb29.learnelectriccircuitsapp
+package com.example.alweb29.learnelectriccircuitsapp.calendar
 
+import android.annotation.SuppressLint
 import android.app.AlarmManager
 import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.icu.util.Calendar
-import android.os.Build
 import androidx.core.app.NotificationCompat
-import com.example.alweb29.learnelectriccircuitsapp.calendar.NotificationReceiver
+import com.example.alweb29.learnelectriccircuitsapp.MainActivity
+import com.example.alweb29.learnelectriccircuitsapp.R
 
 class CalendarNotificationService (
     private val context: Context
     ){
     private val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+    private val scheduler = AndroidAlarmScheduler(context)
     fun showNotification(){
         val activityIntent = Intent(context, MainActivity::class.java)
         val activityPendingIntent = PendingIntent.getActivity(
@@ -34,10 +36,10 @@ class CalendarNotificationService (
         )
     }
 
+    @SuppressLint("ScheduleExactAlarm")
     fun scheduleNotifications(selectedDays: MutableSet<String>, timeInMilliseconds: Long) {
-        val alarmManager = context.getSystemService(Context.ALARM_SERVICE) as AlarmManager
 
-        //TODO clear all previous notifications that were set
+        clearAllNotifications()
 
         for (day in selectedDays) {
             val calendar = Calendar.getInstance()
@@ -59,21 +61,20 @@ class CalendarNotificationService (
                 calendar.add(Calendar.WEEK_OF_YEAR, 1)
             }
 
-            // Create a PendingIntent that will launch your notification when the time comes
-            val intent = Intent(context, NotificationReceiver::class.java)
-            val pendingIntent = PendingIntent.getBroadcast(
-                context,
-                0,
-                intent,
-                PendingIntent.FLAG_UPDATE_CURRENT
-            )
-
-            // Schedule the alarm using the AlarmManager, possibly use setExact or setExactAndAllowWhileIdle
-            alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.timeInMillis, pendingIntent)
+            calendar.timeInMillis.let(scheduler::schedule)
         }
+    }
+
+    /*
+    possibly in the future can make a button to call this function
+    */
+    private fun clearAllNotifications(){
+        scheduler.clearAllNotifications()
     }
 
     companion object{
         const val COUNTER_CHANNEL_ID = "calendar_channel"
     }
+
+
 }
