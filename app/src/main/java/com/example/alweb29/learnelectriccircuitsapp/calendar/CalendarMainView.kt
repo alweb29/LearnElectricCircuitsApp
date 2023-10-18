@@ -1,8 +1,11 @@
 package com.example.alweb29.learnelectriccircuitsapp.calendar
 
+import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Typeface
 import android.graphics.drawable.Drawable
+import android.icu.util.Calendar
 import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
@@ -11,7 +14,9 @@ import android.widget.TextView
 import android.widget.TimePicker
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.alweb29.learnelectriccircuitsapp.CalendarNotificationService
 import com.example.alweb29.learnelectriccircuitsapp.MainActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
 import com.example.alweb29.learnelectriccircuitsapp.calculator.CalculatorMainView
@@ -32,6 +37,8 @@ class CalendarMainView : AppCompatActivity(), OnClickListener {
     private var allDaysBtnClicked : Boolean = false
 
     private val selectedDays = mutableSetOf<String>()
+    private lateinit var calendarNotificationService: CalendarNotificationService
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_calendar_main)
@@ -46,6 +53,9 @@ class CalendarMainView : AppCompatActivity(), OnClickListener {
         tvAllDays = findViewById(R.id.tv_all_days_calendar)
 
         val timePicker : TimePicker = findViewById(R.id.tp_calendar)
+        calendarNotificationService = CalendarNotificationService(applicationContext)
+
+
 
         btnMonday?.setOnClickListener(this)
         btnTuesday?.setOnClickListener(this)
@@ -72,19 +82,34 @@ class CalendarMainView : AppCompatActivity(), OnClickListener {
                 hours = hourOfDay
                 minutes = minute
         }
-        
-        val btnSubmit : TextView = findViewById(R.id.btn_submit_calendar)
-        btnSubmit.setOnClickListener{
-            Toast.makeText(this, "notification set to $hours hours and $minutes minutes, days set to : $selectedDays", Toast.LENGTH_SHORT).show()
 
-            setSelectedDaysToNotifications()
+        val btnSubmit: TextView = findViewById(R.id.btn_submit_calendar)
+        btnSubmit.setOnClickListener {
+
+
+            Toast.makeText(this, "notification set $hours hours and $minutes minutes, days set: $selectedDays", Toast.LENGTH_SHORT).show()
+
+            // Call the method to schedule notifications for selected days
+            if (hours!= null && minutes != null){
+                val timeInMilliseconds = calculateNotificationTime(hours!!, minutes!!)
+                calendarNotificationService.scheduleNotifications(selectedDays, timeInMilliseconds)
+            }
 
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }
-        
+
     }
+
+    private fun calculateNotificationTime(hours: Int, minutes: Int): Long {
+        val calendar = Calendar.getInstance()
+        calendar.set(Calendar.HOUR_OF_DAY, hours)
+        calendar.set(Calendar.MINUTE, minutes)
+        calendar.set(Calendar.SECOND, 0)
+        return calendar.timeInMillis
+    }
+
 
     override fun onClick(view: View?) {
         when(view?.id){
@@ -211,9 +236,4 @@ class CalendarMainView : AppCompatActivity(), OnClickListener {
             R.drawable.basic_choice_tile
         )
     }
-
-    fun setSelectedDaysToNotifications(){
-        //TODO implement this to send list to notifications
-    }
-
 }

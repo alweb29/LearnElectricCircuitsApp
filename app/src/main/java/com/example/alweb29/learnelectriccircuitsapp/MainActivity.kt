@@ -1,11 +1,17 @@
 package com.example.alweb29.learnelectriccircuitsapp
 
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
 import android.widget.Toast
+import androidx.core.content.getSystemService
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.alweb29.learnelectriccircuitsapp.calculator.CalculatorMainView
@@ -25,8 +31,9 @@ class MainActivity : AppCompatActivity() {
                     viewModel.isLoading.value
                 }
             ) // set condition to turn off splash screen
-
         }
+        val service = CalendarNotificationService(applicationContext)
+        createNotificationChannel()
 
         setContentView(R.layout.activity_main)
 
@@ -49,6 +56,7 @@ class MainActivity : AppCompatActivity() {
 
         //TODO implement other buttons
         btnPowerCalculator.setOnClickListener{
+            service.showNotification()
             Toast.makeText(this, "kalkulator mocy", Toast.LENGTH_SHORT).show()
         }
         
@@ -77,5 +85,19 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    private fun createNotificationChannel() {
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.O){
+            val channel = NotificationChannel(
+                CalendarNotificationService.COUNTER_CHANNEL_ID,
+                "Reminder",
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+            channel.description = "Used for reminding about daily learning"
+
+            val notificationManager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
+        }
     }
 }
