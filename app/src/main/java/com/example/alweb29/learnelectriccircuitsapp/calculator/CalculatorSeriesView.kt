@@ -2,7 +2,6 @@ package com.example.alweb29.learnelectriccircuitsapp.calculator
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageButton
@@ -11,19 +10,18 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
 
-class CalculatorSerialView : AppCompatActivity(){
-
+class CalculatorSeriesView : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_calculator_serial)
+        setContentView(R.layout.activity_calculator_series)
 
-        val etR1 : EditText = findViewById(R.id.et_R1_serial)
-        val etR2 : EditText = findViewById(R.id.et_R2_serial)
-        val tvResult : TextView = findViewById(R.id.tv_result_calculator_serial)
-        val btnCalculate : Button = findViewById(R.id.btn_calculate_calculator_serial)
-        val ibGoBackArrow : ImageButton = findViewById(R.id.ib_go_back_arrow_calculator_serial)
+        val etR1 : EditText = findViewById(R.id.et_R1_parallel)
+        val etR2 : EditText = findViewById(R.id.et_R2_parallel)
+        val tvResult : TextView = findViewById(R.id.tv_result_calculator_parallel)
+        val btnCalculate : Button = findViewById(R.id.btn_calculate_calculator_parallel)
+        val ibGoBackArrow : ImageButton = findViewById(R.id.ib_go_back_arrow_calculator_parallel)
 
 
         btnCalculate.setOnClickListener{
@@ -48,9 +46,7 @@ class CalculatorSerialView : AppCompatActivity(){
         val r1 = etR1.text.toString().toFloat()
         val r2 = etR2.text.toString().toFloat()
 
-        return  (1 / ((1/r1) + (1/r2)))
+        return  r1 + r2
 
     }
-
-
 }

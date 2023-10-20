@@ -21,13 +21,13 @@ class CalculatorMainView : AppCompatActivity() {
 
 
         ibSerialConnection.setOnClickListener {
-            intent = Intent(this, CalculatorSerialView::class.java)
+            intent = Intent(this, CalculatorParallelView::class.java)
             startActivity(intent)
 
         }
 
         ibParallelConnection.setOnClickListener {
-            intent = Intent(this, CalculatorParallelView::class.java)
+            intent = Intent(this, CalculatorSeriesView::class.java)
             startActivity(intent)
 
         }

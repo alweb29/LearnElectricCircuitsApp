@@ -3,15 +3,8 @@ package com.example.alweb29.learnelectriccircuitsapp.test
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.alweb29.learnelectriccircuitsapp.MainActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
-import com.example.alweb29.learnelectriccircuitsapp.calculator.CalculatorParallelView
-import com.example.alweb29.learnelectriccircuitsapp.calculator.CalculatorSerialView
 
 class TestMainView : AppCompatActivity(){
 

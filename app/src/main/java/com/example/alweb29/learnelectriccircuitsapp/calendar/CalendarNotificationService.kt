@@ -67,6 +67,7 @@ class CalendarNotificationService (
 
     /*
     possibly in the future can make a button to call this function
+    //TODO fix this function to work
     */
     private fun clearAllNotifications(){
         scheduler.clearAllNotifications()

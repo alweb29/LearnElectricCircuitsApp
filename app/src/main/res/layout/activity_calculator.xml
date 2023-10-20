@@ -27,7 +27,7 @@
             android:id="@+id/ib_serial_connection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/serial_connection_tochange"
+            android:src="@drawable/parallel_connection_tochange"
             android:contentDescription="serial connection"
             android:background="#00000000"
             />
@@ -36,7 +36,7 @@
             android:id="@+id/ib_parallel_connection"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/parallel_connection_to_change"
+            android:src="@drawable/series_connection_to_change"
             android:contentDescription="parallel connection"
             android:background="#00000000"
             />
