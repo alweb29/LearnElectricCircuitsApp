@@ -17,19 +17,24 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.App.Starting"
         tools:targetApi="31">
-        <activity android:name=".calculator.CalculatorMainView"
+        <activity android:name=".resistancecalculator.CalculatorMainView"
             android:exported="false"
             android:label="CalculatorMainView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
-        <activity android:name=".calculator.CalculatorParallelView"
+        <activity android:name=".resistancecalculator.CalculatorParallelView"
             android:exported="false"
             android:label="CalculatorSerialView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
-        <activity android:name=".calculator.CalculatorSeriesView"
+        <activity android:name=".resistancecalculator.CalculatorSeriesView"
             android:exported="false"
             android:label="CalculatorParallelView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".ohmcalculator.CalculatorOhm"
+            android:exported="false"
+            android:label="CalculatorOhm"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
         <activity android:name=".test.TestMainView"

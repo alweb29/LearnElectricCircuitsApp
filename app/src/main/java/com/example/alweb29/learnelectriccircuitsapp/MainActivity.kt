@@ -12,9 +12,10 @@ import android.widget.ImageButton
 import android.widget.Toast
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.alweb29.learnelectriccircuitsapp.calculator.CalculatorMainView
+import com.example.alweb29.learnelectriccircuitsapp.resistancecalculator.CalculatorMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarNotificationService
+import com.example.alweb29.learnelectriccircuitsapp.ohmcalculator.CalculatorOhm
 import com.example.alweb29.learnelectriccircuitsapp.test.TestMainView
 
 class MainActivity : AppCompatActivity() {
@@ -55,10 +56,8 @@ class MainActivity : AppCompatActivity() {
 
         //TODO implement other buttons
         btnPowerCalculator.setOnClickListener{
-            //TODO delete this when schedule notifications will work
-            service.showNotification()
-
-            Toast.makeText(this, "kalkulator mocy", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, CalculatorOhm::class.java)
+            startActivity(intent)
         }
         
         btnCircuitChanger.setOnClickListener{

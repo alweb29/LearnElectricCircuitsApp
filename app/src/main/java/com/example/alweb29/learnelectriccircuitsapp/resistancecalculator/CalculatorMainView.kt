@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.calculator
+package com.example.alweb29.learnelectriccircuitsapp.resistancecalculator
 
 import android.content.Intent
 import android.os.Bundle

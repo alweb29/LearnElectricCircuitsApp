@@ -4,22 +4,22 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".resistancecalculator.CalculatorSeriesView"
+    tools:context=".ohmcalculator.CalculatorOhm"
     android:fillViewport="true">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Series calculator"
+        android:text="Ohm calculator"
         android:textStyle="bold"
-        android:textSize="45sp"
+        android:textSize="42sp"
         android:gravity="center"
         android:layout_margin="20dp"/>
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200sp"
-        android:src="@drawable/series_connection_to_change"/>
+        android:layout_height="100sp"
+        android:src="@drawable/ohm_law"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +31,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="R1"
+            android:text="U(V)"
             android:textSize="40sp"
             />
 
@@ -42,10 +42,10 @@
             android:layout_marginStart="20dp">
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_R1_parallel"
+                android:id="@+id/et_U_ohm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter resistance in ohm"
+                android:hint="Enter voltage "
                 android:inputType="numberDecimal"
                 android:textColorHint="@color/design_default_color_primary" />
 
@@ -63,7 +63,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="R2"
+            android:text="I(A)"
             android:textSize="40sp"
             />
 
@@ -74,10 +74,45 @@
             android:layout_marginStart="20dp">
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_R2_parallel"
+                android:id="@+id/et_I_ohm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter resistance in ohm"
+                android:hint="Enter current"
+                android:inputType="numberDecimal"
+                android:textColorHint="@color/design_default_color_primary" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R(Ω)"
+            android:textSize="40sp"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/et_R_ohm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Enter resistance"
                 android:inputType="numberDecimal"
                 android:textColorHint="@color/design_default_color_primary" />
 
@@ -89,15 +124,15 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_result_calculator_parallel"
+        android:id="@+id/tv_result_power_ohm"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Rn = ..."
+        android:text="P(W) = ..."
         android:textSize="40sp"
         android:layout_marginStart="15dp"/>
 
     <Button
-        android:id="@+id/btn_calculate_calculator_parallel"
+        android:id="@+id/btn_calculate_calculator_ohm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="300sp"
@@ -110,7 +145,7 @@
         />
 
     <ImageButton
-        android:id="@+id/ib_go_back_arrow_calculator_parallel"
+        android:id="@+id/ib_go_back_arrow_calculator_ohm"
         android:src="@drawable/baseline_arrow_back_24"
         android:background="#00000000"
         android:layout_height="50dp"
