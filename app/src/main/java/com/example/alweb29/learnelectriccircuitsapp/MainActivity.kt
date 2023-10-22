@@ -15,6 +15,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.alweb29.learnelectriccircuitsapp.resistancecalculator.CalculatorMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarNotificationService
+import com.example.alweb29.learnelectriccircuitsapp.flashnotes.FlashNotesMainView
 import com.example.alweb29.learnelectriccircuitsapp.ohmcalculator.CalculatorOhm
 import com.example.alweb29.learnelectriccircuitsapp.test.TestMainView
 
@@ -63,17 +64,20 @@ class MainActivity : AppCompatActivity() {
         btnCircuitChanger.setOnClickListener{
             Toast.makeText(this, "zamiennik źródeł", Toast.LENGTH_SHORT).show()
         }
+
         btnCurrentDivider.setOnClickListener{
             Toast.makeText(this, "dzielnik prądowy", Toast.LENGTH_SHORT).show()
         }
+
         btnLearning.setOnClickListener{
             Toast.makeText(this, "nauka", Toast.LENGTH_SHORT).show()
         }
+
         btnFlashNotes.setOnClickListener{
-            Toast.makeText(this, "fiszki", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, FlashNotesMainView::class.java)
+            startActivity(intent)
         }
 
-        
         btnTest.setOnClickListener{
             val intent = Intent(this, TestMainView::class.java)
             startActivity(intent)

@@ -40,6 +40,7 @@ class CalculatorParallelView : AppCompatActivity(){
         ibGoBackArrow.setOnClickListener{
             intent = Intent(this, CalculatorMainView::class.java)
             startActivity(intent)
+            finish()
         }
     }
 

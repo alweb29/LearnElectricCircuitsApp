@@ -8,6 +8,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.alweb29.learnelectriccircuitsapp.MainActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
 import com.example.alweb29.learnelectriccircuitsapp.resistancecalculator.CalculatorMainView
 
@@ -45,7 +46,7 @@ class CalculatorOhm : AppCompatActivity(){
 
 
         ibGoBackArrow.setOnClickListener{
-            intent = Intent(this, CalculatorMainView::class.java)
+            intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
         }

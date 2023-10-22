@@ -37,6 +37,21 @@
             android:label="CalculatorOhm"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
+        <activity android:name=".flashnotes.FlashNotesMainView"
+            android:exported="false"
+            android:label="FlashNotesMain"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".flashnotes.FlashNoteLearningView"
+            android:exported="false"
+            android:label="FlashNotesLearningView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".flashnotes.FlashNotesEditView"
+            android:exported="false"
+            android:label="FlashNotesEditView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
         <activity android:name=".test.TestMainView"
             android:exported="false"
             android:label="TestMainView"
