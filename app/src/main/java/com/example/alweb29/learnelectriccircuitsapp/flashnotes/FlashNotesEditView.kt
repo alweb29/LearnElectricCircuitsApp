@@ -19,7 +19,7 @@ class FlashNotesEditView : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_flashnotes_edit_view)
-
+        //TODO work on saving and making new flash notes
         /*//change to proper id
         btnCreate = findViewById(R.id.btn_create)
         etShortText = findViewById(R.id.btn_create)

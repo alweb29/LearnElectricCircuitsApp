@@ -17,6 +17,7 @@ import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarNotificationService
 import com.example.alweb29.learnelectriccircuitsapp.flashnotes.FlashNotesMainView
 import com.example.alweb29.learnelectriccircuitsapp.ohmcalculator.CalculatorOhm
+import com.example.alweb29.learnelectriccircuitsapp.sourcereplacement.SourceReplacementMainView
 import com.example.alweb29.learnelectriccircuitsapp.test.TestMainView
 
 class MainActivity : AppCompatActivity() {
@@ -62,7 +63,8 @@ class MainActivity : AppCompatActivity() {
         }
         
         btnCircuitChanger.setOnClickListener{
-            Toast.makeText(this, "zamiennik źródeł", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SourceReplacementMainView::class.java)
+            startActivity(intent)
         }
 
         btnCurrentDivider.setOnClickListener{

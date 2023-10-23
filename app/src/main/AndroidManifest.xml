@@ -37,6 +37,11 @@
             android:label="CalculatorOhm"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
+        <activity android:name=".sourcereplacement.SourceReplacementMainView"
+            android:exported="false"
+            android:label="SourceReplacementView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
         <activity android:name=".flashnotes.FlashNotesMainView"
             android:exported="false"
             android:label="FlashNotesMain"
