@@ -29,6 +29,7 @@ class CalculatorParallelView : AppCompatActivity(){
 
             if (etR1.text.isEmpty() || etR2.text.isEmpty()){
                 Toast.makeText(this, "Enter both values", Toast.LENGTH_SHORT).show()
+                tvResult.text = "Rn = ..."
             }else{
 
                 var result = calculateResult(etR1, etR2)

@@ -42,6 +42,11 @@
             android:label="SourceReplacementView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
+        <activity android:name=".voltagedivider.VoltageDividerMainView"
+            android:exported="false"
+            android:label="VoltageDivider"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
         <activity android:name=".flashnotes.FlashNotesMainView"
             android:exported="false"
             android:label="FlashNotesMain"
