@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.flashnotes
+package com.example.alweb29.learnelectriccircuitsapp.flashnotes.data
 
 import com.example.alweb29.learnelectriccircuitsapp.R
 

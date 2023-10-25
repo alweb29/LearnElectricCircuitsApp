@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.flashnotes
+package com.example.alweb29.learnelectriccircuitsapp.flashnotes.data
 
 object UserFlashNotesData : FlashNotesDataSet {
     override var flashNotes: MutableList<FlashNote> = mutableListOf<FlashNote>()

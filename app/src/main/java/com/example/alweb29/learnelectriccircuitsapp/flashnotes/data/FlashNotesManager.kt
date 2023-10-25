@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.flashnotes
+package com.example.alweb29.learnelectriccircuitsapp.flashnotes.data
 
 import android.content.Context
 import android.content.SharedPreferences

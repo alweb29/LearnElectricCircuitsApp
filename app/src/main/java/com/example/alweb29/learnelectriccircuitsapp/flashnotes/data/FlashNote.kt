@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.flashnotes
+package com.example.alweb29.learnelectriccircuitsapp.flashnotes.data
 
 class FlashNote(shortDef: String, longDef: String) {
     constructor(shortDef: String, longDef: String, image: Int) : this(shortDef, longDef) {

@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.flashnotes
+package com.example.alweb29.learnelectriccircuitsapp.flashnotes.data
 
 interface FlashNotesDataSet {
     var flashNotes :MutableList<FlashNote>
@@ -6,7 +6,7 @@ interface FlashNotesDataSet {
     var listSize :Int
 
 
-    fun getNextFlashNote() : FlashNote{
+    fun getNextFlashNote() : FlashNote {
         if (currentIndex>= listSize - 1){
             currentIndex = 0
             return flashNotes[0]
@@ -15,7 +15,7 @@ interface FlashNotesDataSet {
             return flashNotes[currentIndex]
         }
     }
-    fun getPreviousFlashNote():FlashNote{
+    fun getPreviousFlashNote(): FlashNote {
         return if (currentIndex <= 0){
             currentIndex = listSize -1
             flashNotes[listSize - 1]
@@ -25,7 +25,7 @@ interface FlashNotesDataSet {
         }
     }
 
-    fun getFirstFlashNote() : FlashNote{
+    fun getFirstFlashNote() : FlashNote {
         return flashNotes[0]
     }
 }

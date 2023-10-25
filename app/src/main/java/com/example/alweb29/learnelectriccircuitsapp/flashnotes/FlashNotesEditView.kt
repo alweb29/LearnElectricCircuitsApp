@@ -1,12 +1,11 @@
 package com.example.alweb29.learnelectriccircuitsapp.flashnotes
 
-import android.content.Context
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
+import com.example.alweb29.learnelectriccircuitsapp.flashnotes.data.FlashNote
 
 
 class FlashNotesEditView : AppCompatActivity(){

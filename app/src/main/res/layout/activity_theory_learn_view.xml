@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".theory.TheoryLearnView">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_flash_note_learning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="#9050F0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_navigation_btns">
+
+        <!-- consider changing layout height to be compatible with size  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/tv_header_learn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Flashcard Text"
+                android:textSize="25sp"
+                android:gravity="center"/>
+
+            <ImageView
+                android:id="@+id/iv_image_learn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:src="@drawable/parallel_connection_tochange"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"
+                android:layout_marginTop="8dp"/>
+            <TextView
+                android:id="@+id/tv_text_learn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Flashcard Text"
+                android:textSize="25sp"
+                android:gravity="center"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll_navigation_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="clip_horizontal"
+        android:layout_margin="16dp"
+
+        app:layout_constraintBottom_toTopOf="@id/tv_back_arrow_learn">
+
+        <TextView
+            android:id="@+id/tv_prev_page"
+            android:layout_width="0dp"
+            android:layout_height="100sp"
+            android:layout_weight="2"
+            android:text="previous"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/basic_choice_tile"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100sp"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:id="@+id/tv_next_page"
+            android:layout_width="0dp"
+            android:layout_height="100sp"
+            android:text="next"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:background="@drawable/basic_choice_tile"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_back_arrow_learn"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10sp"
+        android:background="@drawable/baseline_done_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

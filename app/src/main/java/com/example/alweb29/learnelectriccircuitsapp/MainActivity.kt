@@ -19,6 +19,7 @@ import com.example.alweb29.learnelectriccircuitsapp.flashnotes.FlashNotesMainVie
 import com.example.alweb29.learnelectriccircuitsapp.ohmcalculator.CalculatorOhm
 import com.example.alweb29.learnelectriccircuitsapp.sourcereplacement.SourceReplacementMainView
 import com.example.alweb29.learnelectriccircuitsapp.test.TestMainView
+import com.example.alweb29.learnelectriccircuitsapp.theory.TheoryMainView
 import com.example.alweb29.learnelectriccircuitsapp.voltagedivider.VoltageDividerMainView
 
 class MainActivity : AppCompatActivity() {
@@ -74,7 +75,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnLearning.setOnClickListener{
-            Toast.makeText(this, "nauka", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, TheoryMainView::class.java)
+            startActivity(intent)
         }
 
         btnFlashNotes.setOnClickListener{

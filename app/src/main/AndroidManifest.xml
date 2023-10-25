@@ -47,6 +47,16 @@
             android:label="VoltageDivider"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
+        <activity android:name=".theory.TheoryMainView"
+            android:exported="false"
+            android:label="TheoryMainView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".theory.TheoryLearnView"
+            android:exported="false"
+            android:label="TheoryLearnView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
         <activity android:name=".flashnotes.FlashNotesMainView"
             android:exported="false"
             android:label="FlashNotesMain"

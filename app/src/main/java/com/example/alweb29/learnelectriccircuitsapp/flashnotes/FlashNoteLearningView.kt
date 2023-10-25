@@ -2,15 +2,17 @@ package com.example.alweb29.learnelectriccircuitsapp.flashnotes
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
-import com.example.alweb29.learnelectriccircuitsapp.MainActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
+import com.example.alweb29.learnelectriccircuitsapp.flashnotes.data.DefaultFlashNotesData
+import com.example.alweb29.learnelectriccircuitsapp.flashnotes.data.FlashNote
+import com.example.alweb29.learnelectriccircuitsapp.flashnotes.data.FlashNotesDataSet
+import com.example.alweb29.learnelectriccircuitsapp.flashnotes.data.UserFlashNotesData
 
 class FlashNoteLearningView : AppCompatActivity(), OnClickListener {
 
