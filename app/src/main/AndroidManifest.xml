@@ -42,9 +42,19 @@
             android:label="SourceReplacementView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
-        <activity android:name=".voltagedivider.VoltageDividerMainView"
+        <activity android:name=".dividers.DividersMainView"
+            android:exported="false"
+            android:label="Dividers"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".dividers.VoltageDividerMainView"
             android:exported="false"
             android:label="VoltageDivider"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".dividers.CurrentDividerMainView"
+            android:exported="false"
+            android:label="CurrentDivider"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
         <activity android:name=".theory.TheoryMainView"

@@ -8,10 +8,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alweb29.learnelectriccircuitsapp.MainActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
-import com.example.alweb29.learnelectriccircuitsapp.theory.chapters.Chapter
-import com.example.alweb29.learnelectriccircuitsapp.theory.chapters.Chapter1
-import com.example.alweb29.learnelectriccircuitsapp.theory.chapters.Chapter2
-import com.example.alweb29.learnelectriccircuitsapp.voltagedivider.VoltageDividerMainView
 
 class TheoryMainView : AppCompatActivity() {
 

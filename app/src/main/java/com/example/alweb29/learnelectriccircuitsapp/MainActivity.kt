@@ -9,18 +9,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ImageButton
-import android.widget.Toast
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.alweb29.learnelectriccircuitsapp.resistancecalculator.CalculatorMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarNotificationService
+import com.example.alweb29.learnelectriccircuitsapp.dividers.DividersMainView
 import com.example.alweb29.learnelectriccircuitsapp.flashnotes.FlashNotesMainView
 import com.example.alweb29.learnelectriccircuitsapp.ohmcalculator.CalculatorOhm
 import com.example.alweb29.learnelectriccircuitsapp.sourcereplacement.SourceReplacementMainView
 import com.example.alweb29.learnelectriccircuitsapp.test.TestMainView
 import com.example.alweb29.learnelectriccircuitsapp.theory.TheoryMainView
-import com.example.alweb29.learnelectriccircuitsapp.voltagedivider.VoltageDividerMainView
+import com.example.alweb29.learnelectriccircuitsapp.dividers.VoltageDividerMainView
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnCurrentDivider.setOnClickListener{
-            val intent = Intent(this, VoltageDividerMainView::class.java)
+            val intent = Intent(this, DividersMainView::class.java)
             startActivity(intent)
         }
 

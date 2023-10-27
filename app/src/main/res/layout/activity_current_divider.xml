@@ -4,48 +4,53 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".dividers.VoltageDividerMainView"
+    tools:context=".dividers.CurrentDividerMainView"
     android:fillViewport="true">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Voltage divider"
+        android:text="Current divider"
         android:textStyle="bold"
         android:textSize="42sp"
         android:gravity="center"
+        android:layout_weight="1"
         android:layout_margin="20dp"/>
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="150sp"
-        android:src="@drawable/voltage_divider_img"/>
+        android:layout_weight="2"
+        android:src="@drawable/current_divider"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="15dp"
+        android:layout_weight="1"
         android:layout_gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="V1(V)"
+            android:text="I1(A)"
             android:textSize="40sp"
+            android:layout_weight="1"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="4"
             android:layout_marginStart="20dp">
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_V1_voltage_divider"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter voltage "
+                android:hint="Enter current "
                 android:inputType="numberDecimal"
                 android:textColorHint="@color/design_default_color_primary" />
 
@@ -58,6 +63,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="15dp"
+        android:layout_weight="1"
         android:layout_gravity="center">
 
         <TextView
@@ -65,34 +71,43 @@
             android:layout_height="wrap_content"
             android:text="R1(R)"
             android:textSize="40sp"
+            android:layout_weight="1"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp">
+            android:layout_weight="4">
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_R1_voltage_divider"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:hint="Enter current"
+                android:hint="Enter resistance"
                 android:inputType="numberDecimal"
                 android:textColorHint="@color/design_default_color_primary" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_R1_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="= ... A"
+        android:textSize="30sp"
+        android:layout_margin="15dp"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_margin="15dp"
+        android:layout_weight="1"
         android:layout_gravity="center">
 
         <TextView
@@ -100,13 +115,14 @@
             android:layout_height="wrap_content"
             android:text="R2(R)"
             android:textSize="40sp"
+            android:layout_weight="1"
             />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-            android:layout_width="300dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp">
+            android:layout_weight="4">
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_R2_voltage_divider"
@@ -124,12 +140,14 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/tv_result_v_out_voltage_divider"
-        android:layout_width="match_parent"
+        android:id="@+id/tv_R2_result"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="V out = ..."
-        android:textSize="40sp"
-        android:layout_marginStart="15dp"/>
+        android:layout_margin="15dp"
+        android:text="= ... A"
+        android:textSize="30sp"
+        />
 
     <Button
         android:id="@+id/btn_calculate_voltage_divider"
@@ -142,6 +160,7 @@
         android:layout_marginStart="50sp"
         android:layout_marginBottom="10sp"
         android:layout_marginTop="10dp"
+        android:layout_weight="1"
         />
 
     <ImageButton
@@ -150,6 +169,7 @@
         android:background="#00000000"
         android:layout_height="50dp"
         android:layout_width="50dp"
+        android:layout_weight="1"
         android:contentDescription="Go Back to main Menu"/>
 
 

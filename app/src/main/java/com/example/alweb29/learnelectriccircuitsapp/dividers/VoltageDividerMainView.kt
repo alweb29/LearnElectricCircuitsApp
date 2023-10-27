@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.voltagedivider
+package com.example.alweb29.learnelectriccircuitsapp.dividers
 
 import android.content.Intent
 import android.os.Bundle
@@ -32,7 +32,7 @@ class VoltageDividerMainView : AppCompatActivity() {
             }
         }
         ibGoBackArrow.setOnClickListener {
-            intent = Intent(this, MainActivity::class.java)
+            intent = Intent(this, DividersMainView::class.java)
             startActivity(intent)
             finish()
         }
