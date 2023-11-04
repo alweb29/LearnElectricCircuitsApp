@@ -17,9 +17,9 @@
         android:orientation="vertical"
         android:gravity="center"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/ib_circuit_changer"
+        app:layout_constraintBottom_toTopOf="@id/ll_calculator_3"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ib_power_calculator">
+        app:layout_constraintEnd_toStartOf="@id/ll_calculator_2">
 
         <ImageButton
             android:id="@+id/ib_calculator_1"
@@ -46,88 +46,244 @@
 
 
 
-
-    <ImageButton
-        android:id="@+id/ib_power_calculator"
+    <LinearLayout
+        android:id="@+id/ll_calculator_2"
         android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/basic_choice_tile"
-        android:contentDescription="Second Button"
-        android:src="@drawable/baseline_power_24"
-        app:layout_constraintBottom_toTopOf="@id/ib_current_divider"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ll_calculator_3"
         app:layout_constraintStart_toEndOf="@id/ll_calculator_1"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/ib_power_calculator"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/basic_choice_tile"
+            android:contentDescription="Second Button"
+            android:src="@drawable/baseline_power_24"
+            app:layout_constraintBottom_toTopOf="@id/ib_current_divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ll_calculator_1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Power Calculator"
+            android:textColor="@color/white"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
 
 
 
-    <ImageButton
-        android:id="@+id/ib_circuit_changer"
+    <LinearLayout
+        android:id="@+id/ll_calculator_3"
+        android:layout_width="150dp"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
         app:layout_constraintTop_toBottomOf="@id/ll_calculator_1"
-        app:layout_constraintBottom_toTopOf="@id/ib_learning"
+        app:layout_constraintBottom_toTopOf="@id/ll_calculator_5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ib_current_divider"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:contentDescription="Third Button"
-        android:src="@drawable/baseline_switch_left_24"
-        android:background="@drawable/basic_choice_tile"/>
+        app:layout_constraintEnd_toStartOf="@id/ll_calculator_4">
 
-    <ImageButton
-        android:id="@+id/ib_current_divider"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:background="@drawable/basic_choice_tile"
-        android:contentDescription="Fourth Button"
-        android:src="@drawable/baseline_alt_route_24"
-        app:layout_constraintBottom_toTopOf="@id/ib_flash_notes"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ib_circuit_changer"
-        app:layout_constraintTop_toBottomOf="@id/ib_power_calculator" />
+        <ImageButton
+            android:id="@+id/ib_circuit_changer"
+            app:layout_constraintTop_toBottomOf="@id/ll_calculator_1"
+            app:layout_constraintBottom_toTopOf="@id/ib_learning"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ib_current_divider"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="Third Button"
+            android:src="@drawable/baseline_switch_left_24"
+            android:background="@drawable/basic_choice_tile"/>
 
-    <ImageButton
-        android:id="@+id/ib_learning"
-        app:layout_constraintTop_toBottomOf="@id/ib_circuit_changer"
-        app:layout_constraintBottom_toTopOf="@id/ib_test_main_view_button"
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Circuit Changer"
+            android:textColor="@color/white"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_calculator_4"
+        android:layout_width="150dp"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ll_calculator_1"
+        app:layout_constraintBottom_toTopOf="@id/ll_calculator_5"
+        app:layout_constraintStart_toEndOf="@id/ll_calculator_3"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/ib_current_divider"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:background="@drawable/basic_choice_tile"
+            android:contentDescription="Fourth Button"
+            android:src="@drawable/baseline_alt_route_24"
+            app:layout_constraintBottom_toTopOf="@id/ib_flash_notes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ll_calculator_3"
+            app:layout_constraintTop_toBottomOf="@id/ll_calculator_2" />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Dividers"
+            android:textColor="@color/white"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_calculator_5"
+        android:layout_width="150dp"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ll_calculator_3"
+        app:layout_constraintBottom_toTopOf="@id/ll_calculator_7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ib_flash_notes"
+        app:layout_constraintEnd_toStartOf="@+id/ll_calculator_6">
+
+        <ImageButton
+            android:id="@+id/ib_learning"
+            app:layout_constraintTop_toBottomOf="@id/ll_calculator_3"
+            app:layout_constraintBottom_toTopOf="@id/ib_test_main_view_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ib_flash_notes"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="Fifth Button"
+            android:src="@drawable/baseline_book_24"
+            android:background="@drawable/basic_choice_tile"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Learn"
+            android:textColor="@color/white"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calculator_6"
         android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:contentDescription="Fifth Button"
-        android:src="@drawable/baseline_book_24"
-        android:background="@drawable/basic_choice_tile"/>
-    <ImageButton
-        android:id="@+id/ib_flash_notes"
-        app:layout_constraintTop_toBottomOf="@id/ib_current_divider"
-        app:layout_constraintBottom_toTopOf="@id/ib_calendar_main_view_button"
-        app:layout_constraintStart_toEndOf="@id/ib_learning"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ll_calculator_4"
+        app:layout_constraintBottom_toTopOf="@id/ll_calculator_8"
+        app:layout_constraintStart_toEndOf="@id/ll_calculator_5"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/ib_flash_notes"
+            app:layout_constraintTop_toBottomOf="@id/ll_calculator_4"
+            app:layout_constraintBottom_toTopOf="@id/ib_calendar_main_view_button"
+            app:layout_constraintStart_toEndOf="@id/ll_calculator_5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="Sixth Button"
+            android:src="@drawable/baseline_dynamic_feed_24"
+            android:background="@drawable/basic_choice_tile"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Flash Notes"
+            android:textColor="@color/white"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calculator_7"
         android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:contentDescription="Sixth Button"
-        android:src="@drawable/baseline_dynamic_feed_24"
-        android:background="@drawable/basic_choice_tile"/>
-    <ImageButton
-        android:id="@+id/ib_test_main_view_button"
-        app:layout_constraintTop_toBottomOf="@id/ib_learning"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ll_calculator_5"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ib_calendar_main_view_button"
+        app:layout_constraintEnd_toStartOf="@+id/ll_calculator_6">
+
+        <ImageButton
+            android:id="@+id/ib_test_main_view_button"
+            app:layout_constraintTop_toBottomOf="@id/ll_calculator_5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ib_calendar_main_view_button"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="Seventh Button"
+            android:src="@drawable/baseline_done_24"
+            android:background="@drawable/basic_choice_tile"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Test"
+            android:textColor="@color/white"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_calculator_8"
         android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:contentDescription="Seventh Button"
-        android:src="@drawable/baseline_done_24"
-        android:background="@drawable/basic_choice_tile"/>
-    <ImageButton
-        android:id="@+id/ib_calendar_main_view_button"
-        app:layout_constraintTop_toBottomOf="@id/ib_flash_notes"
+        android:layout_height="170dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/ll_calculator_6"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@id/ib_test_main_view_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:contentDescription="Eighth Button"
-        android:src="@drawable/baseline_edit_calendar_24"
-        android:background="@drawable/basic_choice_tile"/>
+        app:layout_constraintStart_toEndOf="@id/ll_calculator_5"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageButton
+            android:id="@+id/ib_calendar_main_view_button"
+            app:layout_constraintTop_toBottomOf="@id/ll_calculator_6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ib_test_main_view_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:contentDescription="Eighth Button"
+            android:src="@drawable/baseline_edit_calendar_24"
+            android:background="@drawable/basic_choice_tile"/>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="20dp"
+            android:text="Notifications"
+            android:textColor="@color/white"
+            android:gravity="center"
+
+            />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
