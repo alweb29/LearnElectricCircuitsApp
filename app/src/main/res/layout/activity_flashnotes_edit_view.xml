@@ -3,17 +3,145 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     android:layout_gravity="center"
-    android:orientation="vertical">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".flashnotes.FlashNotesEditView">
 
     <TextView
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:gravity="center"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_flash_notes_learning_view"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="edit text"/>
+        android:text="Edit Your Flash Notes"
+        android:gravity="center"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/cv_flash_note_learning"/>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_flash_note_learning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="#FF50FF"
+        app:layout_constraintTop_toBottomOf="@id/tv_flash_notes_learning_view"
+        app:layout_constraintBottom_toTopOf="@id/ll_navigation_btns">
+
+        <!-- consider changing layout height to be compatible with size  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400sp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10sp"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_short_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Your short text here"
+                    android:textColorHint="@color/design_default_color_primary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_long_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Enter Your long text here"
+                    android:textColorHint="@color/design_default_color_primary" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll_navigation_btns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="clip_horizontal"
+        android:layout_margin="16dp"
+        app:layout_constraintTop_toBottomOf="@id/cv_flash_note_learning"
+        app:layout_constraintBottom_toTopOf="@id/tv_back_arrow_flash_notes">
+
+        <TextView
+            android:id="@+id/tv_prev_flash_note"
+            android:layout_width="0dp"
+            android:layout_height="100sp"
+            android:layout_weight="2"
+            android:text="previous"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/basic_choice_tile"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="100sp"
+            android:layout_weight="3"/>
+
+        <TextView
+            android:id="@+id/tv_next_flash_note"
+            android:layout_width="0dp"
+            android:layout_height="100sp"
+            android:text="next"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_weight="2"
+            android:background="@drawable/basic_choice_tile"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_back_arrow_flash_notes"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginStart="10sp"
+        android:background="@drawable/baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/tv_add_flash_note"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10sp"
+        android:background="@drawable/baseline_add_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+    <TextView
+        android:id="@+id/tv_delete_flash_note"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10sp"
+        android:background="@drawable/baseline_delete_24"
+        app:layout_constraintStart_toEndOf="@id/tv_back_arrow_flash_notes"
+        app:layout_constraintEnd_toStartOf="@id/tv_add_flash_note"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
