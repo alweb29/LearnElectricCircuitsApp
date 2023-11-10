@@ -67,6 +67,12 @@
             android:label="TheoryLearnView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
+        <activity android:name=".theveninnorton.TheveninNortonMainView"
+            android:exported="false"
+            android:label="TheveninNortonMainView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+
         <activity android:name=".flashnotes.FlashNotesMainView"
             android:exported="false"
             android:label="FlashNotesMain"

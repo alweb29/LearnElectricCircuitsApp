@@ -32,6 +32,7 @@ class FlashNotesEditView : AppCompatActivity(){
     private val sharedPrefsFlashNotesList: SharedPreferences by lazy {
         getSharedPreferences("UserFlashNotes", Context.MODE_PRIVATE)
     }
+    //TODO fix this function
 
     private var flashNotes : ArrayList<FlashNote> = ArrayList()
     override fun onCreate(savedInstanceState: Bundle?) {
