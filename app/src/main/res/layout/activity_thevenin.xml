@@ -222,6 +222,7 @@
                 android:textSize="40sp"
                 android:layout_marginStart="10sp"
                 android:layout_marginBottom="10sp"
+                android:layout_weight="1"
                 />
             <TextView
                 android:id="@+id/tv_eth"
@@ -229,13 +230,15 @@
                 android:layout_height="wrap_content"
                 android:text="ETh = ..."
                 android:textSize="40sp"
+                android:layout_weight="1"
                 android:layout_marginStart="10sp"
                 />
 
-            <TextView
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="400sp"
+                android:layout_height="300sp"
                 android:layout_weight="1"
+                android:scaleX="0.8"
                 android:background="@drawable/thevenin_th"
                 />
 
