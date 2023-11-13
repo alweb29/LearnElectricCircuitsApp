@@ -21,6 +21,8 @@ import com.example.alweb29.learnelectriccircuitsapp.sourcereplacement.SourceRepl
 import com.example.alweb29.learnelectriccircuitsapp.test.TestMainView
 import com.example.alweb29.learnelectriccircuitsapp.theory.TheoryMainView
 import com.example.alweb29.learnelectriccircuitsapp.dividers.VoltageDividerMainView
+import com.example.alweb29.learnelectriccircuitsapp.theveninnorton.TheveninMainView
+import com.example.alweb29.learnelectriccircuitsapp.theveninnorton.TheveninNortonMainView
 
 class MainActivity : AppCompatActivity() {
 
@@ -52,13 +54,10 @@ class MainActivity : AppCompatActivity() {
         val btnTest : ImageButton = findViewById(R.id.ib_test_main_view_button)
 
         btnCalculator.setOnClickListener{
-            Log.e("msg", "went to calculator")
             val intent = Intent(this, CalculatorMainView::class.java)
             startActivity(intent)
         }
 
-
-        //TODO implement other buttons
         btnPowerCalculator.setOnClickListener{
             val intent = Intent(this, CalculatorOhm::class.java)
             startActivity(intent)
@@ -70,7 +69,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnCurrentDivider.setOnClickListener{
-            val intent = Intent(this, DividersMainView::class.java)
+            val intent = Intent(this, TheveninNortonMainView::class.java)
             startActivity(intent)
         }
 

@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".dividers.DividersMainView"
+    tools:context=".theveninnorton.TheveninMainView"
     android:background="@drawable/background_image"
     android:layout_gravity="center">
 
