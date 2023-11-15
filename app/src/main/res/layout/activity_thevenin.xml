@@ -5,12 +5,23 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_gravity="center">
+            android:layout_gravity="top|center">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Thevenin calculations"
+                android:textSize="30sp"
+                android:textAllCaps="true"
+                android:layout_margin="10sp"
+                />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="200sp"
@@ -39,169 +50,176 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="15dp"
-                android:layout_gravity="center"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="E1"
-                    android:textSize="40sp"
-                    />
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="300dp"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="E1"
+                        android:textSize="40sp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_E1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter source value"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/design_default_color_primary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp">
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
 
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/et_E1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Enter source value"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="@color/design_default_color_primary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R1"
+                        android:textSize="40sp"
+                        />
 
-                </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp">
 
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_R1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter resistance value"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/design_default_color_primary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R2"
+                        android:textSize="40sp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_R2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter resistance value"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/design_default_color_primary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R3"
+                        android:textSize="40sp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_R3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter resistance value"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/design_default_color_primary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="15dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="R4"
+                        android:textSize="40sp"
+                        />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp">
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/et_R4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="Enter resistance value"
+                            android:inputType="numberDecimal"
+                            android:textColorHint="@color/design_default_color_primary" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="15dp"
-                android:layout_gravity="center"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R1"
-                    android:textSize="40sp"
-                    />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp">
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/et_R1"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Enter resistance value"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="@color/design_default_color_primary" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="15dp"
-                android:layout_gravity="center"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R2"
-                    android:textSize="40sp"
-                    />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp">
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/et_R2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Enter resistance value"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="@color/design_default_color_primary" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="15dp"
-                android:layout_gravity="center"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R3"
-                    android:textSize="40sp"
-                    />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp">
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/et_R3"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Enter resistance value"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="@color/design_default_color_primary" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="15dp"
-                android:layout_gravity="center"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="R4"
-                    android:textSize="40sp"
-                    />
-
-                <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp">
-
-                    <androidx.appcompat.widget.AppCompatEditText
-                        android:id="@+id/et_R4"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:hint="Enter resistance value"
-                        android:inputType="numberDecimal"
-                        android:textColorHint="@color/design_default_color_primary" />
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-            </LinearLayout>
 
             <TextView
+                android:id="@+id/tv_btn_calculate"
                 android:layout_width="300sp"
                 android:layout_height="100sp"
                 android:text="calculate!"
