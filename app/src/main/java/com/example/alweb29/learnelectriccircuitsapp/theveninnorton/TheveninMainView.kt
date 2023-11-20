@@ -20,16 +20,28 @@ class TheveninMainView : AppCompatActivity(){
         val etR1 : EditText = findViewById(R.id.et_R1)
         val etR2 : EditText = findViewById(R.id.et_R2)
         val etR3 : EditText = findViewById(R.id.et_R3)
-        val etR4 : EditText = findViewById(R.id.et_R4)
 
         val btnSubmit : TextView = findViewById(R.id.tv_btn_calculate)
+        val tvRTh : TextView = findViewById(R.id.tv_rth)
+        val tvETh : TextView = findViewById(R.id.tv_eth)
+        val tvI3 : TextView = findViewById(R.id.tv_i3)
         val ibGoBackArrow : ImageButton = findViewById(R.id.ib_go_back_arrow_dividers)
 
         btnSubmit.setOnClickListener {
-            if (etE.text.isNotEmpty() && etR1.text.isNotEmpty() && etR2.text.isNotEmpty()&&etR3.text.isNotEmpty()&&etR4.text.isNotEmpty()){
-                calculateRThAndETh()
+            if (etE.text.isNotEmpty() && etR1.text.isNotEmpty() && etR2.text.isNotEmpty()&&etR3.text.isNotEmpty()){
+
+                val rTh = (etR1.text.toString().toFloat() * etR2.text.toString().toFloat())/(etR1.text.toString().toFloat() + etR2.text.toString().toFloat())
+                val eTh = etE.text.toString().toFloat() - ((etE.text.toString().toFloat()/(etR1.text.toString().toFloat() + etR2.text.toString().toFloat())) * etR1.text.toString().toFloat())
+                val i3 = eTh/(rTh + etR3.text.toString().toFloat())
+
+                tvRTh.setText("R Th = $rTh")
+                tvETh.setText("E Th = $eTh")
+                tvI3.setText("I 3 = $i3")
             }else{
                 Toast.makeText(this, "Enter all values", Toast.LENGTH_SHORT).show()
+                tvRTh.setText("R Th = ...")
+                tvETh.setText("E Th = ...")
+                tvI3.setText("I 3 = ...")
             }
         }
         ibGoBackArrow.setOnClickListener {
@@ -39,7 +51,4 @@ class TheveninMainView : AppCompatActivity(){
         }
     }
 
-    private fun calculateRThAndETh() {
-        Toast.makeText(this, "Implement calculating", Toast.LENGTH_SHORT).show()
-    }
 }
