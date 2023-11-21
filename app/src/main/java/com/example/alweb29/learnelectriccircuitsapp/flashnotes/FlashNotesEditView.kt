@@ -4,16 +4,13 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alweb29.learnelectriccircuitsapp.MainActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
-import com.example.alweb29.learnelectriccircuitsapp.dividers.DividersMainView
 import com.example.alweb29.learnelectriccircuitsapp.flashnotes.data.FlashNote
-import com.example.alweb29.learnelectriccircuitsapp.flashnotes.data.UserFlashNotesData.flashNotes
 import java.lang.StringBuilder
 
 

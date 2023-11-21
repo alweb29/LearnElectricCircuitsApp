@@ -37,22 +37,22 @@
             android:label="CalculatorOhm"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
-        <activity android:name=".sourcereplacement.SourceReplacementMainView"
+        <activity android:name=".circuitoperations.sourcereplacement.SourceReplacementMainView"
             android:exported="false"
             android:label="SourceReplacementView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
-        <activity android:name=".dividers.DividersMainView"
+        <activity android:name=".circuitoperations.dividers.DividersMainView"
             android:exported="false"
             android:label="Dividers"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
-        <activity android:name=".dividers.VoltageDividerMainView"
+        <activity android:name=".circuitoperations.dividers.VoltageDividerMainView"
             android:exported="false"
             android:label="VoltageDivider"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
-        <activity android:name=".dividers.CurrentDividerMainView"
+        <activity android:name=".circuitoperations.dividers.CurrentDividerMainView"
             android:exported="false"
             android:label="CurrentDivider"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
@@ -75,6 +75,11 @@
         <activity android:name=".theveninnorton.TheveninMainView"
             android:exported="false"
             android:label="TheveninMainView"
+            android:theme="@style/Theme.LearnElectricCircuitsApp"/>
+
+        <activity android:name=".circuitoperations.CircuitOperationsMainView"
+            android:exported="false"
+            android:label="CircuitOperationsMainView"
             android:theme="@style/Theme.LearnElectricCircuitsApp"/>
 
         <activity android:name=".theveninnorton.NortonMainView"

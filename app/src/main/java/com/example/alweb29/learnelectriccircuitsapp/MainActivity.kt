@@ -7,21 +7,18 @@ import android.content.Intent
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageButton
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.alweb29.learnelectriccircuitsapp.resistancecalculator.CalculatorMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarMainView
 import com.example.alweb29.learnelectriccircuitsapp.calendar.CalendarNotificationService
-import com.example.alweb29.learnelectriccircuitsapp.dividers.DividersMainView
+import com.example.alweb29.learnelectriccircuitsapp.circuitoperations.CircuitOperationsMainView
 import com.example.alweb29.learnelectriccircuitsapp.flashnotes.FlashNotesMainView
 import com.example.alweb29.learnelectriccircuitsapp.ohmcalculator.CalculatorOhm
-import com.example.alweb29.learnelectriccircuitsapp.sourcereplacement.SourceReplacementMainView
+import com.example.alweb29.learnelectriccircuitsapp.circuitoperations.sourcereplacement.SourceReplacementMainView
 import com.example.alweb29.learnelectriccircuitsapp.test.TestMainView
 import com.example.alweb29.learnelectriccircuitsapp.theory.TheoryMainView
-import com.example.alweb29.learnelectriccircuitsapp.dividers.VoltageDividerMainView
-import com.example.alweb29.learnelectriccircuitsapp.theveninnorton.TheveninMainView
 import com.example.alweb29.learnelectriccircuitsapp.theveninnorton.TheveninNortonMainView
 
 class MainActivity : AppCompatActivity() {
@@ -64,7 +61,7 @@ class MainActivity : AppCompatActivity() {
         }
         
         btnCircuitChanger.setOnClickListener{
-            val intent = Intent(this, SourceReplacementMainView::class.java)
+            val intent = Intent(this, CircuitOperationsMainView::class.java)
             startActivity(intent)
         }
 

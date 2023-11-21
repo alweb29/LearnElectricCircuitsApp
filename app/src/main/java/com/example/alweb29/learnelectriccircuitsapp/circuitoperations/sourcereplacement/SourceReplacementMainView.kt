@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.sourcereplacement
+package com.example.alweb29.learnelectriccircuitsapp.circuitoperations.sourcereplacement
 
 import android.content.Intent
 import android.os.Bundle

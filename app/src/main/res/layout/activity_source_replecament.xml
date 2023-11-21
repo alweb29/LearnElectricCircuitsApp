@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    tools:context=".sourcereplacement.SourceReplacementMainView"
+    tools:context=".circuitoperations.sourcereplacement.SourceReplacementMainView"
     android:fillViewport="true">
 
     <TextView

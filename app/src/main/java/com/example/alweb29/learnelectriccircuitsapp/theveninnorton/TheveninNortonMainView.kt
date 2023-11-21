@@ -7,7 +7,6 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.alweb29.learnelectriccircuitsapp.MainActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
-import com.example.alweb29.learnelectriccircuitsapp.dividers.DividersMainView
 
 class TheveninNortonMainView :AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {

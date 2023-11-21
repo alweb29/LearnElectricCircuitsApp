@@ -1,4 +1,4 @@
-package com.example.alweb29.learnelectriccircuitsapp.dividers
+package com.example.alweb29.learnelectriccircuitsapp.circuitoperations.dividers
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.alweb29.learnelectriccircuitsapp.MainActivity
 import com.example.alweb29.learnelectriccircuitsapp.R
 
 class VoltageDividerMainView : AppCompatActivity() {
