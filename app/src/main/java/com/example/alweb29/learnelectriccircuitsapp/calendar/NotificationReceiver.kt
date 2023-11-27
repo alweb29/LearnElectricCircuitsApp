@@ -29,7 +29,7 @@ class NotificationReceiver : BroadcastReceiver() {
 
         with(NotificationManagerCompat.from(context)) {
             if (ActivityCompat.checkSelfPermission(
-                    context,//was "this" change if this will not work
+                    context,
                     Manifest.permission.POST_NOTIFICATIONS
                 ) != PackageManager.PERMISSION_GRANTED
             ) {
