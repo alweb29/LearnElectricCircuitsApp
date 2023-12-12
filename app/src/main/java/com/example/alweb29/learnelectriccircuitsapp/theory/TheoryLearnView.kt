@@ -11,6 +11,7 @@ import com.example.alweb29.learnelectriccircuitsapp.flashnotes.FlashNotesMainVie
 import com.example.alweb29.learnelectriccircuitsapp.theory.chapters.Chapter
 import com.example.alweb29.learnelectriccircuitsapp.theory.chapters.Chapter1
 import com.example.alweb29.learnelectriccircuitsapp.theory.chapters.Chapter2
+import com.example.alweb29.learnelectriccircuitsapp.theory.chapters.Chapter3
 import com.example.alweb29.learnelectriccircuitsapp.theory.chapters.Page
 
 class TheoryLearnView : AppCompatActivity() {
@@ -32,6 +33,7 @@ class TheoryLearnView : AppCompatActivity() {
         when (intent.getIntExtra("Chapter",1)){
             1->chapter = Chapter1
             2->chapter = Chapter2
+            3->chapter = Chapter3
         }
 
         tvHeader = findViewById(R.id.tv_header_learn)

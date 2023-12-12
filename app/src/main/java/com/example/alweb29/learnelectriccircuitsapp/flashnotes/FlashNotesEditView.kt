@@ -5,6 +5,7 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,7 @@ class FlashNotesEditView : AppCompatActivity(){
 
     private var btnCreate : TextView? = null
     private var btnDelete : TextView? = null
-    private var btnGoBackArrow : TextView? = null
+    private var btnGoBackArrow : ImageButton? = null
     private var tvPrev : TextView? = null
     private var tvNext : TextView? = null
     private var etShortText : EditText? = null

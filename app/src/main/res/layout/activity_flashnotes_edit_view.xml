@@ -6,7 +6,8 @@
     android:orientation="vertical"
     android:layout_gravity="center"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".flashnotes.FlashNotesEditView">
+    tools:context=".flashnotes.FlashNotesEditView"
+    android:background="@drawable/background_image">
 
     <TextView
         android:id="@+id/tv_flash_notes_learning_view"
@@ -111,16 +112,17 @@
     </LinearLayout>
 
 
-    <TextView
+    <ImageButton
         android:id="@+id/tv_back_arrow_flash_notes"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="10sp"
-        android:background="@drawable/baseline_arrow_back_24"
+        android:src="@drawable/baseline_arrow_back_24"
+        android:scaleX="3"
+        android:scaleY="3"
+        android:background="#00000000"
+        android:layout_height="100dp"
+        android:layout_width="100dp"
+        android:contentDescription="Go Back to main Menu"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"/>
     <TextView
         android:id="@+id/tv_add_flash_note"
         android:layout_width="100sp"
